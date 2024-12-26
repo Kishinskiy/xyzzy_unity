@@ -16,17 +16,6 @@
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "ff028df8-3527-4a32-861d-987ca769b7eb",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HorizantalMovement",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
                     "name": "Keyboard",
                     "id": "f8ff2fb3-880a-4e35-955b-be4c59cd9977",
                     "path": "1DAxis",
@@ -52,6 +41,39 @@
                     "name": "positive",
                     "id": "c1ab66b2-ab03-44f9-bbda-b40de8261bb0",
                     "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HorizantalMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Arrows",
+                    "id": "954070fd-0896-445d-88a1-a289853b4b1e",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HorizantalMovement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "9c400e65-6ee7-4a96-b00e-a258394a9ea1",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HorizantalMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "92a0fe33-b319-4254-a184-5dab6c0e4e47",
+                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
