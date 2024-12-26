@@ -7,9 +7,9 @@ public class HeroInputReader : MonoBehaviour
 {
     [SerializeField] private Hero _hero;
     
-    public void OnHorizontalMovement(InputAction.CallbackContext context)
+    private void OnHorizontalMovement(InputValue  context) 
     {
-        var direction = context.ReadValue<float>();
+        var direction = context.Get<float>();
         _hero.SetDirection(direction);
     }
 }
