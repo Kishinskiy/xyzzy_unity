@@ -11,4 +11,9 @@ public class HeroInputReader : MonoBehaviour
        var direction =  context.ReadValue<float>();
        _hero.SetDirection(direction);
     }
+
+    public void OnSayAction(InputAction.CallbackContext context)
+    {
+       _hero.SaySomething();
+    }
 }

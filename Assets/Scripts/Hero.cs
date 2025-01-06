@@ -13,6 +13,11 @@ public class Hero : MonoBehaviour
         _direction = direction;
     }
 
+    public void SaySomething()
+    {
+	    Debug.Log("Pressed Action Button!");
+    }
+
     private void Update()
     {
        if (_direction != 0)
