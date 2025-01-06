@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class HeroInputReader : MonoBehaviour
 {
     [SerializeField] private Hero _hero;
- public void OnHorizaontalMovement(InputValue context)
+ public void OnHorizontalMovement(InputValue context)
     {
        var direction =  context.Get<float>();
        _hero.SetDirection(direction);
