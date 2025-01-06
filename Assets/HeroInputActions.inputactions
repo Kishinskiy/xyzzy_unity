@@ -6,7 +6,7 @@
             "id": "d594b480-5c6e-470c-8b5f-bcbde70454b4",
             "actions": [
                 {
-                    "name": "HorizaontalMovement",
+                    "name": "HorizontalMovement",
                     "type": "Button",
                     "id": "68032ba2-1d4b-4b4f-aa0c-842b9bb6b82e",
                     "expectedControlType": "Button",
@@ -30,7 +30,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "HorizaontalMovement",
+                    "action": "HorizontalMovement",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -41,7 +41,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "HorizaontalMovement",
+                    "action": "HorizontalMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -52,7 +52,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "HorizaontalMovement",
+                    "action": "HorizontalMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -63,7 +63,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "HorizaontalMovement",
+                    "action": "HorizontalMovement",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -74,7 +74,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "HorizaontalMovement",
+                    "action": "HorizontalMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -85,7 +85,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "HorizaontalMovement",
+                    "action": "HorizontalMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
