@@ -7,9 +7,9 @@
             "actions": [
                 {
                     "name": "HorizaontalMovement",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "68032ba2-1d4b-4b4f-aa0c-842b9bb6b82e",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
                 },
@@ -24,9 +24,9 @@
             ],
             "bindings": [
                 {
-                    "name": "Keys",
-                    "id": "6c403ed0-2c32-4158-b58d-fdf321d82004",
-                    "path": "1DAxis",
+                    "name": "2D Vector",
+                    "id": "1d719e9c-5199-431f-a294-bbd810d95dd0",
+                    "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -35,8 +35,30 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "negative",
-                    "id": "72bb2ff5-abc4-4ba3-8223-46ea2353f4d6",
+                    "name": "up",
+                    "id": "bd29784a-d3a6-4ed8-aca0-f3c11ab0bfbb",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HorizaontalMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "e3825c97-e49f-4253-9a20-e047784f3154",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HorizaontalMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "59358cfd-9705-4bbd-ae24-4f2a747058e9",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
@@ -46,42 +68,9 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "positive",
-                    "id": "fc6672e2-9f8d-4cb0-98fa-0fdf0d4669f6",
+                    "name": "right",
+                    "id": "3ae82720-6d09-443c-b296-cea45bffb99a",
                     "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HorizaontalMovement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "Arrows",
-                    "id": "4f6fc592-41d1-457a-b01d-82c6c3c0502c",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HorizaontalMovement",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "217ae818-dcb9-4e67-ac35-71445055e51e",
-                    "path": "<Keyboard>/leftArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HorizaontalMovement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "78f16f70-2494-418c-a219-e0ef9907e4f5",
-                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

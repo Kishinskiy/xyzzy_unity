@@ -5,12 +5,14 @@ using UnityEngine;
 public class Hero : MonoBehaviour
 {
 	[SerializeField] private float _speed;
-    private float _direction;
+    private float _directionX;
+    private float _directionY;
     
 
-    public void SetDirection(float direction)
+    public void SetDirection(float directionX, float directionY)
     {
-        _direction = direction;
+        _directionX = directionX;
+        _directionY = directionY;
     }
 
     public void SaySomething()
@@ -20,11 +22,13 @@ public class Hero : MonoBehaviour
 
     private void Update()
     {
-       if (_direction != 0)
+       if (_directionX != 0 || _directionY != 0)
 		{
-			var delta = _direction * _speed * Time.deltaTime;
-			var newXPosition = transform.position.x + delta;
-			transform.position = new Vector3(newXPosition, transform.position.y, transform.position.z);
+			var deltaX = _directionX * _speed * Time.deltaTime;
+			var deltaY = _directionY * _speed * Time.deltaTime;
+			var newXPosition = transform.position.x + deltaX;
+			var newYPosition = transform.position.y + deltaY;
+			transform.position = new Vector3(newXPosition, newYPosition, transform.position.z);
 		}
     }
 }
