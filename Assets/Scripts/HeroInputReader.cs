@@ -14,6 +14,10 @@ public class HeroInputReader : MonoBehaviour
 
     public void OnSayAction(InputAction.CallbackContext context)
     {
-       _hero.SaySomething();
+       if (context.canceled)
+       {
+          _hero.SaySomething();
+       }
+       
     }
 }
