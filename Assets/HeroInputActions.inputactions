@@ -16,7 +16,7 @@
             ],
             "bindings": [
                 {
-                    "name": "1D Axis",
+                    "name": "Keys",
                     "id": "6c403ed0-2c32-4158-b58d-fdf321d82004",
                     "path": "1DAxis",
                     "interactions": "",
@@ -41,6 +41,39 @@
                     "name": "positive",
                     "id": "fc6672e2-9f8d-4cb0-98fa-0fdf0d4669f6",
                     "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HorizaontalMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Arrows",
+                    "id": "4f6fc592-41d1-457a-b01d-82c6c3c0502c",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HorizaontalMovement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "217ae818-dcb9-4e67-ac35-71445055e51e",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HorizaontalMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "78f16f70-2494-418c-a219-e0ef9907e4f5",
+                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
