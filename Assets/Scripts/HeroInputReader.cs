@@ -9,7 +9,7 @@ public class HeroInputReader : MonoBehaviour
  public void OnHorizontalMovement(InputAction.CallbackContext context)
     {
         var direction = context.ReadValue<Vector2>();
-       _hero.SetDirection(direction.x, direction.y);
+       _hero.SetDirection(direction);
     }
 
     public void OnSayAction(InputAction.CallbackContext context)
