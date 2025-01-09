@@ -541,7 +541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 404537361}
   - component: {fileID: 404537362}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Land2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1301,7 +1301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 788357741}
   - component: {fileID: 788357742}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Land3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1948,6 +1948,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 3
+  _jumpForce: 1
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  _groundCheckRadius: 0.32
+  _groundCheckPositionDelta: {x: 0.07, y: -0.12, z: 0}
 --- !u!114 &1673772193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2035,7 +2041,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.010362387, y: 0.0034534931}
+  m_Offset: {x: 0.07, y: 0.0034534931}
   m_Size: {x: 0.64637613, y: 0.9164405}
   m_Direction: 0
 --- !u!50 &1673772196
@@ -2265,7 +2271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1864261362}
   - component: {fileID: 1864261363}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Land1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
