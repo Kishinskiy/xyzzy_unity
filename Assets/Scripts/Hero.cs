@@ -5,6 +5,7 @@ using UnityEngine;
 public class Hero : MonoBehaviour
 {
 	[SerializeField] private float _speed;
+	[SerializeField] private float _jumpForce;
     
     private Vector2 _direction;
     private Rigidbody2D _rigidbody;
@@ -27,5 +28,10 @@ public class Hero : MonoBehaviour
     private void FixedUpdate()
     {
 	    _rigidbody.velocity = new Vector2(_direction.x * _speed, _rigidbody.velocity.y);
+	    var isJumping = _direction.y > 0;
+	    if (isJumping)
+	    {
+		    _rigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+	    }
     }
 }
