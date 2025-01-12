@@ -30,7 +30,7 @@ public class Hero : MonoBehaviour
 
     private bool IsGrounded()
     {
-	  var hit = Physics2D.CircleCast(transform.position + _groundCheckPositionDelta, _groundCheckRadius, Vector2.down, 1f, _groundLayer);
+	  var hit = Physics2D.CircleCast(transform.position + _groundCheckPositionDelta, _groundCheckRadius, Vector2.down, 0, _groundLayer);
 	  return hit.collider != null;
 		
     }
