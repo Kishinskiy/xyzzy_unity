@@ -6,11 +6,17 @@ namespace PixelCrew.Components
 {
     public class IncraseScoreComponent : MonoBehaviour
     {
-        // [SerializeField] private GameObject _objectToScore;
+        [SerializeField] private GameController _controller;
+        [SerializeField] private int _score;
+
         public void IncraseScore()
         {
-            Debug.Log("you get 1 coin!");
+            _controller.IncraseScore(_score);
         }
+
+        
+
+        
     }
     
 }
