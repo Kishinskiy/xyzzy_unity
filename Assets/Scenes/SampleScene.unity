@@ -5133,6 +5133,7 @@ GameObject:
   - component: {fileID: 1673772194}
   - component: {fileID: 1673772196}
   - component: {fileID: 1673772195}
+  - component: {fileID: 1673772197}
   m_Layer: 0
   m_Name: Hero_0
   m_TagString: Player
@@ -5332,6 +5333,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &1673772197
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673772189}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 832405667a6cdfa44abb8931786d1ea8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1702723659
 GameObject:
   m_ObjectHideFlags: 0
