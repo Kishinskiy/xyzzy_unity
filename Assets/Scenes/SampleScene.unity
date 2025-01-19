@@ -2544,7 +2544,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.33, y: -0.44000047, z: -10}
+  m_LocalPosition: {x: -7.3521, y: -0.4460005, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1669480207}
@@ -2645,7 +2645,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702905839}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.33, y: -0.44000047, z: -10}
+  m_LocalPosition: {x: -7.3521, y: -0.4460005, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1779500416}
@@ -3486,7 +3486,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 945328597}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.063, y: -0.207, z: 0}
+  m_LocalPosition: {x: -0, y: -0.144, z: 0}
   m_LocalScale: {x: 1, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 1673772191}
@@ -5210,8 +5210,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -6146700129834819302, guid: f73be3d38f0094252b02d1649154270d,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 07cec91e9b53a485fabbcc365fc32784, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5230,7 +5229,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1673772189}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.33, y: -0.44, z: 0}
+  m_LocalPosition: {x: -7.3521, y: -0.446, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 945328598}
@@ -5339,8 +5338,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07, y: 0.0034534931}
-  m_Size: {x: 0.64637613, y: 0.9164405}
+  m_Offset: {x: 0.01, y: 0.06}
+  m_Size: {x: 0.64, y: 0.9164405}
   m_Direction: 0
 --- !u!50 &1673772196
 Rigidbody2D:
@@ -5357,7 +5356,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 4
+  m_GravityScale: 3
   m_Material: {fileID: 6200000, guid: d1a7de569decd455d9ea0029b65d4308, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
