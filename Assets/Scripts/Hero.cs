@@ -11,11 +11,16 @@ public class Hero : MonoBehaviour
     private Vector2 _direction;
     private Rigidbody2D _rigidbody;
     private Animator _animator;
+    private SpriteRenderer _sprite;
 
+    private static readonly int IsGroundKey = Animator.StringToHash("IsGround");
+    private static readonly int VericalVelocityKey = Animator.StringToHash("VericalVelocity");
+    private static readonly int Is_RunningKey = Animator.StringToHash("Is_Running");
     private void Awake()
     {
 	    _rigidbody = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        _sprite = GetComponent<SpriteRenderer>();
     }
     
     public void SetDirection(Vector2 direction)
@@ -60,8 +65,22 @@ public class Hero : MonoBehaviour
 		    // Это условие ломает весь прыжок. В итоге высата прыжка слижком низкая, но в какой то моент условие срабатывает и высата прыжка становится маскимальной.
 		    // без этого условия лучше.
 	    }
-	    _animator.SetBool("IsGround", isGrounded);
-	    _animator.SetFloat("VericalVelocity", _rigidbody.velocity.y);
-	    _animator.SetBool("Is_Running", _direction.x != 0);
+	    _animator.SetBool(IsGroundKey, isGrounded);
+	    _animator.SetFloat(VericalVelocityKey, _rigidbody.velocity.y);
+	    _animator.SetBool(Is_RunningKey, _direction.x != 0);
+
+	    UpdateSpriteDirection();
+	    
+    }
+
+    private void UpdateSpriteDirection()
+    {
+	    if (_direction.x > 0)
+	    {
+		    _sprite.flipX = false;
+	    } else if (_direction.x < 0)
+	    {
+		    _sprite.flipX = true;
+	    }
     }
 }
