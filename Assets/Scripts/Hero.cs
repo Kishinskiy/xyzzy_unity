@@ -1,4 +1,5 @@
-﻿ using System.Collections;
+﻿ using System;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +13,8 @@ public class Hero : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private Animator _animator;
     private SpriteRenderer _sprite;
+    private bool _isGrounded;
+    private bool _allowDoubleJump;
 
     private static readonly int IsGroundKey = Animator.StringToHash("IsGround");
     private static readonly int VericalVelocityKey = Animator.StringToHash("VericalVelocity");
@@ -26,6 +29,11 @@ public class Hero : MonoBehaviour
     public void SetDirection(Vector2 direction)
     {
         _direction = direction;
+    }
+
+    private void Update()
+    {
+	    _isGrounded = IsGrounded();
     }
 
     public void SaySomething()
@@ -49,30 +57,50 @@ public class Hero : MonoBehaviour
     
     private void FixedUpdate()
     {
-	    _rigidbody.velocity = new Vector2(_direction.x * _speed, _rigidbody.velocity.y);
-	    var isJumping = _direction.y > 0;
-	    var isGrounded = IsGrounded();
-	    if (isJumping)
-	    {
-		    if (isGrounded)
-		    {
-			    _rigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
-		    }
-		    //else if (_rigidbody.velocity.y > 0)
-		    //{
-		    //    _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _rigidbody.velocity.y * 0.5f);
-		    //}
-		    // Это условие ломает весь прыжок. В итоге высата прыжка слижком низкая, но в какой то моент условие срабатывает и высата прыжка становится маскимальной.
-		    // без этого условия лучше.
-	    }
-	    _animator.SetBool(IsGroundKey, isGrounded);
+	    var xVelocity = _direction.x * _speed;
+	    var yVelocity = CalculateYVelocity();
+	    
+	    _rigidbody.velocity = new Vector2(xVelocity, yVelocity);
+	    
+	    
+	    _animator.SetBool(IsGroundKey, _isGrounded);
 	    _animator.SetFloat(VericalVelocityKey, _rigidbody.velocity.y);
 	    _animator.SetBool(Is_RunningKey, _direction.x != 0);
-
-	    UpdateSpriteDirection();
 	    
+	    UpdateSpriteDirection();
     }
 
+    private float CalculateYVelocity()
+    {
+	    var yVelocity = _rigidbody.velocity.y;
+	    var isJumpingPressing = _direction.y > 0;
+	    if (_isGrounded) _allowDoubleJump = true;
+	    if (isJumpingPressing)
+	    {
+		    yVelocity = CalculateJumpVelocity(yVelocity);
+	    }
+	    else if (_rigidbody.velocity.y > 0)
+	    {
+		    yVelocity *= 0.5f;
+	    }
+	    
+	    return yVelocity;
+    }
+
+    private float CalculateJumpVelocity(float yVelocity)
+    {
+	    var isFalling = _rigidbody.velocity.y <= 0.001f;
+	    if (!isFalling) return yVelocity;
+	    if (_isGrounded)
+	    {
+		    yVelocity += _jumpForce;
+	    } else if (_allowDoubleJump)
+	    {
+		    yVelocity = _jumpForce;
+		    _allowDoubleJump = false;
+	    }
+	    return yVelocity;
+    }
     private void UpdateSpriteDirection()
     {
 	    if (_direction.x > 0)
