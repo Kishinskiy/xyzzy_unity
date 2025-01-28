@@ -5143,6 +5143,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1843353257}
   - component: {fileID: 1843353258}
+  - component: {fileID: 1843353259}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -5176,6 +5177,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bae41037edf74a6ba199fc84483c775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1843353259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843353256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7de73f2c8c9c42efa535efb9147a654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputTimeToLive: 1.5
+  _cheats:
+  - name: qwerty
+    action:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1843353258}
+          m_MethodName: IncraseScore
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 100
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - name: re
+    action:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1669480204}
+          m_MethodName: Reload
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &1847962882 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7502469638071529888, guid: d028815ab4eaa4d3ca81d56324500165,
