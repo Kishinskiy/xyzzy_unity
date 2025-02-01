@@ -3359,6 +3359,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ec15356652114598ae4dccd760d2359, type: 3}
+--- !u!114 &641329912 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -8878236282553770281, guid: d028815ab4eaa4d3ca81d56324500165,
+    type: 3}
+  m_PrefabInstance: {fileID: 1192651542}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55bc8f049ffff45c4a17edecb282dede, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &641390707 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8697747672313288212, guid: 60114409ecb4d4ad6aa9299fabb29774,
@@ -5826,6 +5838,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 447029197}
     m_Modifications:
+    - target: {fileID: -4069931089519079434, guid: d028815ab4eaa4d3ca81d56324500165,
+        type: 3}
+      propertyPath: _action.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4069931089519079434, guid: d028815ab4eaa4d3ca81d56324500165,
+        type: 3}
+      propertyPath: _action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 641329912}
+    - target: {fileID: -4069931089519079434, guid: d028815ab4eaa4d3ca81d56324500165,
+        type: 3}
+      propertyPath: _action.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TakeDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: -4069931089519079434, guid: d028815ab4eaa4d3ca81d56324500165,
+        type: 3}
+      propertyPath: _action.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7502469638071529888, guid: d028815ab4eaa4d3ca81d56324500165,
         type: 3}
       propertyPath: m_RootOrder
