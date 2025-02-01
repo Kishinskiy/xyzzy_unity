@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 7502469638071529891}
   - component: {fileID: 7502469638071529889}
   - component: {fileID: 3343542810414022969}
-  - component: {fileID: -5025249442450503419}
+  - component: {fileID: -4069931089519079434}
+  - component: {fileID: -8878236282553770281}
   m_Layer: 0
   m_Name: Spikes
   m_TagString: Untagged
@@ -94,7 +95,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.014438987, y: 0.23170139}
@@ -122,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c4dec3c1d78deb44b6dad9ac5f47cad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-5025249442450503419
+--- !u!114 &-4069931089519079434
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,21 +132,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 7502469638071529890}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80a10bf240f291a438d2c1219b45fa2a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0064b6d3eacb028449375cc09ada3e0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _tag: Player
   _action:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3343542810414022969}
-        m_MethodName: Reload
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &-8878236282553770281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7502469638071529890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55bc8f049ffff45c4a17edecb282dede, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
