@@ -1,6 +1,7 @@
 ﻿ using System;
  using System.Collections;
 using System.Collections.Generic;
+using PixelCrew.Components;
 using UnityEngine;
 
 public class Hero : MonoBehaviour
@@ -9,6 +10,9 @@ public class Hero : MonoBehaviour
 	[SerializeField] private float _jumpForce;
 	[SerializeField] private float _damageJumpSpeed;
 	[SerializeField] private LayerCheck _groundCheck;
+	[SerializeField] private float _interactRadius;
+	[SerializeField] private Collider2D[] _interactResults = new Collider2D[1];
+	[SerializeField] private LayerMask _interactionLayer;
     
     private Vector2 _direction;
     private Rigidbody2D _rigidbody;
@@ -118,5 +122,15 @@ public class Hero : MonoBehaviour
     {
 	    _animator.SetTrigger(Hit);
 	    _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _damageJumpSpeed);
+    }
+
+    public void Interact()
+    {
+	    var size = Physics2D.OverlapCircleNonAlloc(transform.position, _interactRadius, _interactResults, _interactionLayer);
+	    for (int i = 0; i < size; i++)
+	    {
+		    var interactable = _interactResults[i].GetComponent<InteractableComponent>();
+		    interactable?.Interact();
+	    } 
     }
 }
