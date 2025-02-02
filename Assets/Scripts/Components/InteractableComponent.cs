@@ -9,7 +9,10 @@ namespace PixelCrew.Components
 
         public void Interact()
         {
-            _action?.Invoke();   
+            if (_action != null)
+            {
+                _action.Invoke();
+            }
         }
     }
 }

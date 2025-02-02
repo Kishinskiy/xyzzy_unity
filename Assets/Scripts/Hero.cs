@@ -11,9 +11,10 @@ public class Hero : MonoBehaviour
 	[SerializeField] private float _damageJumpSpeed;
 	[SerializeField] private LayerCheck _groundCheck;
 	[SerializeField] private float _interactRadius;
-	[SerializeField] private Collider2D[] _interactResults = new Collider2D[1];
+	
 	[SerializeField] private LayerMask _interactionLayer;
     
+    private Collider2D[] _interactResults = new Collider2D[1];
     private Vector2 _direction;
     private Rigidbody2D _rigidbody;
     private Animator _animator;
